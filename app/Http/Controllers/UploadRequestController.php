@@ -49,7 +49,7 @@ class UploadRequest extends Controller {
         return redirect()->away("Http://127.0.0.1:84/api/upload",'304',[
             'hash' => $hash,
             'client_ip' => $client_ip,
-            'file' => $file->id
+            'file' => $file
 
         ]);
     }

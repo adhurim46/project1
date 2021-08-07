@@ -42,7 +42,7 @@ class DownloadRequestController extends Controller {
 
             return redirect()->away("Http://127.0.0.1:84/api/download",302,[
 
-                'file' => $file->id,
+                'file' => $file,
                 'hash' => $hash
             ]);
 

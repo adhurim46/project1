@@ -38,10 +38,7 @@ class FileServerController extends Controller {
                 'fileserver' => $fileserver
 
             ];
-            
-
-
-
+        
     }else {
         return false;
     }
