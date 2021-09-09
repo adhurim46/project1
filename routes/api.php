@@ -3,7 +3,6 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
-use GuzzleHttp;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +19,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Http::get('/download', [DownloadRequestController::class, 'downloadRequests']);
-Http::get('/upload', [UploadRequestController::class  ,'uploadfile']);
+Http::post('/download', [DownloadRequestController::class, 'downloadRequests']);
+Http::post('/upload', [UploadRequestController::class  ,'uploadfile']);
 
 
 Http::post('/fileserver/download', [FileServerController::class, 'download']);
 Http::post('/fileserver/upload', [FileServerController::class, 'upload']);
+
+
+
